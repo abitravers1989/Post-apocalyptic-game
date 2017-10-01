@@ -3,12 +3,21 @@ var canvas = document.querySelector('#myCanvas');
 var context = canvas.getContext('2d');
 
 function drawCoin (){
-  this.xcoinpos = 200
-  this.ycoinpos = 100
   context.beginPath(0, 400);
   context.fillStyle = ("white");
   context.beginPath();
   context.arc(coin.xcoinpos,coin.ycoinpos,20,0,2*Math.PI);
+  context.fillStyle = "white";
+  context.stroke();
+  context.closePath();
+  context.fill();
+};
+
+function drawCoin2 (){
+  context.beginPath(0, 400);
+  context.fillStyle = ("white");
+  context.beginPath();
+  context.arc(300,200,20,0,2*Math.PI);
   context.fillStyle = "white";
   context.stroke();
   context.closePath();

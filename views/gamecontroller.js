@@ -1,11 +1,17 @@
 var mario = new Character
 var coin = new Coin
+var coin2 = new Coin2
+// console.log(coin2)
+// console.log(coin)
 
 // console.log(mario.score, "snakes")
 var intervalRunner = setInterval(function(){
-  if (mario.score < 1){moveandrender(); checkCollision();}
+  if (mario.score < 1){moveandrender(); checkCollision(); drawCoin2();}
   else {
     moveandrender();
+    drawCoin2();
+    console.log(coin2)
+    console.log(coin)
     console.log(intervalRunner)
     clearInterval(intervalRunner)
     setTimeout(printendpage,1500);}
